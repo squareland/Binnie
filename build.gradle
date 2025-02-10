@@ -46,16 +46,16 @@ allprojects {
 
     repositories {
         maven {
+            name "ModMaven"
+            url "https://modmaven.dev"
+        }
+        maven {
             name = "jei"
             url "http://dvs1.progwml6.com/files/maven"
         }
         maven {
-            name = "ic2, forestry"
-            url = "http://maven.ic2.player.to/"
-        }
-        maven {
             name = "CurseForge"
-            url = "https://minecraft.curseforge.com/api/maven/"
+            url = "https://cursemaven.com"
         }
 		maven {
 			url = "https://mod-buildcraft.com/maven"
@@ -66,12 +66,12 @@ allprojects {
     }
 
     dependencies {
-        deobfCompile("net.sengir.forestry:forestry_${forestry_mcversion}:${forestry_version}") {
+        deobfCompile("curse.maven:forestry-59751:5903382") {
             transitive = false
         }
         deobfProvided "mezz.jei:jei_${jei_mcversion}:${jei_version}:api"
         runtime "mezz.jei:jei_${jei_mcversion}:${jei_version}"
-        runtime "jei-bees:jeibees:${jeibees_version}:mc${jeibees_mcversion}"
+//        runtime "jei-bees:jeibees:${jeibees_version}:mc${jeibees_mcversion}"
         deobfProvided "net.industrial-craft:industrialcraft-2:${ic2_version}:api"
         runtime "net.industrial-craft:industrialcraft-2:${ic2_version}"
         deobfProvided "CraftTweaker2:CraftTweaker2-API:${crafttweaker_version}"
