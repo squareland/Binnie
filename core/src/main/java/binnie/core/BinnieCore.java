@@ -56,7 +56,7 @@ import java.util.List;
 	version = "@VERSION@",
 	acceptedMinecraftVersions = Constants.ACCEPTED_MINECRAFT_VERSIONS,
 	dependencies = "required-after:forge@[14.23.5.2816,);" +
-		"required-after:forestry@[5.8.2.367,);" +
+		"required-after:forestry@[5.8.2.0,);" +
 		"after:jei@[4.7.8,);"
 )
 public final class BinnieCore extends AbstractMod {
